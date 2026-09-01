@@ -7,3 +7,9 @@ For this semester, I plan to build a simple task management application. The mai
 I will develop the project step by step throughout the semester. As I learn new concepts in the course, I plan to improve the structure and functionality of the application. I also want to apply what I learn about Java, Maven, Git, testing, databases, and other development tools.
 
 My goal is to keep the application simple and understandable while gradually improving it during the course. This repository will contain the different stages of the project and show how it develops throughout the semester.
+
+## Requirements
+
+- Java 21
+- Maven Wrapper
+- Git
