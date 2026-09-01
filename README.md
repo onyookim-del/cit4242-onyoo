@@ -13,3 +13,10 @@ My goal is to keep the application simple and understandable while gradually imp
 - Java 21
 - Maven Wrapper
 - Git
+
+## Build
+
+To build the project, run:
+
+```bash
+./mvnw clean package
