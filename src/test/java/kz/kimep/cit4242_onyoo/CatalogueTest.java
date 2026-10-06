@@ -2,6 +2,8 @@ package kz.kimep.cit4242_onyoo;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
@@ -32,5 +34,15 @@ class CatalogueTest {
 
         assertEquals(3, catalogue.books().size());
         assertEquals("Clean Code", catalogue.books().get(0).title());
+    }
+
+    @Test
+    void unknownAuthorReturnsEmptyList() {
+        Catalogue catalogue = new Catalogue(List.of(
+                new Book("Clean Code", "Robert C. Martin", 464),
+                new Book("Effective Java", "Joshua Bloch", 416)
+        ));
+
+        assertEquals(List.of(), catalogue.titlesBy("Unknown Author"));
     }
 }

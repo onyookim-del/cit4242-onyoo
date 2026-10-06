@@ -29,11 +29,12 @@ public class CsvBookSource implements BookSource {
                     .map(line -> line.split(";"))
                     .map(parts -> new Book(
                             parts[0],
-                            Integer.parseInt(parts[1])
+                            parts[1],
+                            Integer.parseInt(parts[2])
                     ))
                     .toList();
 
-        } catch (Exception e) {
+        } catch (java.io.IOException e) {
             throw new IllegalStateException("Could not load books", e);
         }
     }

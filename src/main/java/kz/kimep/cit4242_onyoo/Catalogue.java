@@ -13,4 +13,12 @@ public final class Catalogue {
     public List<Book> books() {
         return books;
     }
+
+    public List<String> titlesBy(String author) {
+        return books.stream()
+                .filter(book -> book.author().equals(author))
+                .map(Book::title)
+                .sorted()
+                .toList();
+    }
 }
